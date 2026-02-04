@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-
-DATABASE_URL = "mysql+pymysql://hrms_user:hrms123@localhost/hrms_db"
+MYSQL_USER="sql12816090"
+MYSQL_PASSWORD="G2AFCQqugx"
+MYSQL_HOST="sql12.freesqldatabase.com"
+MYSQL_PORT="3306"
+MYSQL_DB="sql12816090"
+# DATABASE_URL = "mysql+pymysql://hrms_user:hrms123@localhost/hrms_db
+DATABASE_URL = f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB}"
 
 
 engine = create_engine(DATABASE_URL, echo=True)
